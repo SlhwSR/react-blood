@@ -22,24 +22,24 @@ import {
       mapList: [{
         key: "/",
         icon: createElement(HomeFilled),
-        label: "帖子管理",
+        label: "系统管理",
         children: [
           {
             key: "index",
             //  icon: createElement(UserOutlined),
-            label: "文章管理",
+            label: "权限管理",
           },
           {
             key: "producitonDate",
             // icon: createElement(LaptopOutlined),
-            label: "分类管理",
+            label: "用户管理",
           },
         ],
       },
       {
         key: "video",
         icon: createElement(FundOutlined),
-        label: "视频管理",
+        label: "标本管理",
         children: [
           // {
           //   key: "productionShowList",

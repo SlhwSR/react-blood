@@ -19,10 +19,10 @@ const AxiosInterceptors = (props) => {
       (config) => {
         console.log("ccccc" + location.pathname);
         nProgress.start();
-        config.headers["Authorization"] =
-          // local.get("token") || "d958911d-031f-4c80-b5ee-64467608ff9c";
-          "Bearer " +
-          window.localStorage.getItem("blog-token")?.split('"')?.join("");
+        // config.headers["Authorization"] =
+        //   // local.get("token") || "d958911d-031f-4c80-b5ee-64467608ff9c";
+        //   "Bearer " +
+        //   window.localStorage.getItem("blog-token")?.split('"')?.join("");
         if (config.method === "get" && config.params !== null) {
           if (judgArr(config.params)) {
             config.paramsSerializer = function (params) {
@@ -46,11 +46,11 @@ const AxiosInterceptors = (props) => {
       },
       (err) => {
         nProgress.done();
-        if (err?.response?.data.statusCode === 401) {
-          message.error("未授权请先登录！");
-          navigate.current("/login");
-        }
-        console.log("---后置");
+        // if (err?.response?.data.statusCode === 401) {
+        //   message.error("未授权请先登录！");
+        //   navigate.current("/login");
+        // }
+        // console.log("---后置");
         // message.error(JSON.stringify(err.response))
         // console.log();
         // if(err?.response.data.)

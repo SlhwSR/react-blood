@@ -25,53 +25,43 @@ export const router = createHashRouter([
         <AxiosInterceptors request={request}></AxiosInterceptors>
       </>
     ),
-    nodeRef: createRef(),
     children: [
       {
         path: "/",
         element: <Main></Main>,
-        nodeRef: createRef(),
         children: [
           {
             path: "/index",
             element: <GroupManage></GroupManage>,
-            nodeRef: createRef(),
             //index: true,
           },
           {
             path: "/planManage",
             element: <PlanManage></PlanManage>,
-            nodeRef: createRef(),
           },
           {
             path: "/producitonDate",
             element: <CardManage />,
-            nodeRef: createRef(),
           },
           {
             path: "/personal",
             element: <Personal></Personal>,
-            nodeRef: createRef(),
           },
           {
             path: "/articleDetail",
             element: <ArticleDetail></ArticleDetail>,
-            nodeRef: createRef(),
           },
           {
             path: "/video/category",
             element: <VideoCategory></VideoCategory>,
-            nodeRef: createRef(),
           },
           {
             path: "/video/list",
             element: <VideoList></VideoList>,
-            nodeRef: createRef(),
           },
           {
             path: "/video/detail",
             element: <VideoDetail></VideoDetail>,
-            nodeRef: createRef(),
           },
         ],
       },
